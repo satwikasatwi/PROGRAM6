@@ -1,0 +1,41 @@
+#include <stdio.h>
+
+int main() {
+    int i,j,r,c,sum,choice;
+    int a[100][100];
+    printf("Enter size of row:");
+    scanf("%d",&r);
+    printf("Enter size of column:");
+    scanf("%d",&c);
+    printf("Enter array elements:\n");
+    for(i=0;i<r;i++)
+    {
+        for(j=0;j<c;j++)
+        {
+            scanf("%d",&a[i][j]);
+        }
+    }
+      for(i=0;i<r;i++)
+    {
+        sum=0;
+        for(j=0;j<c;j++)
+        {
+         sum=sum+a[i][j];   
+        }
+        printf("enter your choice");
+        scanf("%d",&choice);
+        switch(choice)
+        {
+            case 1: printf("sum of row 1 is %d\n",a[0][0]+a[0][1]+a[0][2]);
+                    break;
+            case 2:printf("sum of row 2 is %d\n",a[1][0]+a[1][1]+a[1][2]);
+                   break;
+            case 3:printf("sum of row 1 is %d\n",a[2][0]+a[2][1]+a[2][2]);
+                      break;
+            default:-printf("ERROR...!");
+                    break;
+        }
+    }
+
+    return 0;
+}
